@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-container-wrapper">
+        <div class="sub-container left-container">
+          <div class="left-top-section">
+            <div class="logo-container">
+              <img
+                src="https://avo.blob.core.windows.net/testcontainer/image%201.png"
+                width="30"
+                alt="logo"
+              />
+              <span class="header-text">Avocado</span>
+            </div>
+          </div>
+          <div class="hero-content">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/bdd0/3a47/ed0bc01d684a3c47d401b947ec859e6f?Expires=1722816000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gUrvc20j6Z7AhHLFkuNn75f-Mui6P91I38TB1uiwTlODASFZaZ9xfwCbnr-AdqNIZtvfJy75~VtlG8CR8~1O1KS-21jRaD~TCKnMUDWiHXXjXXZ1x3bHoufgaRwap5h3J50XNG9naVy4cDbqYaRPfxIy-XsnVUfYNJO5buUP5O8rgv2QZY1FoFzeDHBEA~Rp0jJlOZruJvt47fynRPZZpYcXAkYHsAC5FUc8doNyKPw4kLy7R1aVHp4XW32ZJ5PGuXPjrLxOzYg0vHQChlESlu-Z~v11X1JQs2h5OuLb6HaT2EgNdKc~01exCH~vIL-VjsrIWT1FDFF8jF~6~4SknA__"
+              width="500"
+              alt="temp-imd"
+              class="hero-img"
+            />
+            <h1 class="hero-header">
+              Hi, I am Avocado. An Lorem ipsum dolor sit amet lorem. And you?
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="sub-container right-container">
+        <div class="right-logo-container logo-container">
+          <img
+            src="https://avo.blob.core.windows.net/testcontainer/image%201.png"
+            width="30"
+            alt="logo"
+          />
+          <span class="header-text">Avocado</span>
+        </div>
+        <!-- <div id="api" role="main"></div> -->
+        <div id="api" data-name="SelfAsserted" role="main">
+          <div class="heading">
+            <h1 role="heading">User Details</h1>
+          </div>
+          <div class="buttons"></div>
+          <div class="intro">
+            <p>Please provide the following details.</p>
+          </div>
+          <form id="attributeVerification">
+            <div
+              id="requiredFieldMissing"
+              class="error pageLevel"
+              style="display: none"
+              aria-hidden="true"
+            >
+              A required field is missing. Please fill out all required fields
+              and try again.
+            </div>
+            <div
+              id="fieldIncorrect"
+              class="error pageLevel"
+              style="display: none"
+              aria-hidden="true"
+            >
+              One or more fields are filled out incorrectly. Please check your
+              entries and try again.
+            </div>
+            <div
+              id="captchaUnresolved"
+              class="error pageLevel"
+              style="display: none"
+              aria-hidden="true"
+            >
+              Captcha challenge is not resolved. Please solve it to proceed.
+            </div>
+            <div
+              id="claimVerificationServerError"
+              class="error pageLevel"
+              style="display: none"
+              aria-hidden="true"
+            ></div>
+            <div id="attributeList" class="attr">
+              <ul>
+                <li
+                  class="VerificationControl emailVerificationControl_li CaptchaControl"
+                >
+                  <div class="attrEntry">
+                    <label
+                      id="emailVerificationControl_label"
+                      for="emailVerificationControl"
+                      class=""
+                    ></label>
+                    <div class="error itemLevel" role="alert"></div>
+                    <div
+                      class="verificationControlContent"
+                      id="emailVerificationControl"
+                    >
+                      <div class="verificationInfoText">
+                        <div
+                          id="emailVerificationControl_info_message"
+                          aria-hidden="true"
+                          role="alert"
+                          aria-label="Verification is necessary. Please click Send button."
+                          style="display: none"
+                        >
+                          Verification is necessary. Please click Send button.
+                        </div>
+                      </div>
+                      <div class="verificationSuccessText">
+                        <div
+                          id="emailVerificationControl_success_message"
+                          aria-hidden="true"
+                          role="alert"
+                          aria-label=""
+                          style="display: none"
+                        ></div>
+                      </div>
+                      <div class="verificationErrorText error">
+                        <div
+                          id="emailVerificationControl_error_message"
+                          aria-hidden="true"
+                          role="alert"
+                          aria-label=""
+                          style="display: none"
+                        ></div>
+                      </div>
+                      <ul>
+                        <li
+                          class="EmailBox email_li email"
+                          aria-hidden="false"
+                          style="display: inline"
+                        >
+                          <div class="attrEntry">
+                            <label id="email_label" for="email" class="required"
+                              >Email Address</label
+                            >
+                            <div class="error itemLevel" role="alert"></div>
+                            <input
+                              id="email"
+                              class="textInput"
+                              type="email"
+                              placeholder="Email Address"
+                              pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
+                              title="Email address that can be used to contact you."
+                              aria-required="true"
+                              autofocus="autofocus"
+                            /><a
+                              class="helpLink tiny"
+                              href="javascript:void(0)"
+                              data-help="Email address that can be used to contact you."
+                              >What is this?</a
+                            >
+                          </div>
+                        </li>
+                        <li
+                          class="TextBox emailVerificationCode_li VerificationCode"
+                          aria-hidden="true"
+                          style="display: none"
+                        >
+                          <div class="attrEntry">
+                            <label
+                              id="emailVerificationCode_label"
+                              for="emailVerificationCode"
+                              class="required"
+                              >Verification Code</label
+                            >
+                            <div class="error itemLevel" role="alert"></div>
+                            <input
+                              id="emailVerificationCode"
+                              class="textInput"
+                              type="text"
+                              placeholder="Verification Code"
+                              title="Enter your verification code"
+                              aria-required="true"
+                              autocomplete="off"
+                              disabled=""
+                            /><a
+                              class="helpLink tiny"
+                              href="javascript:void(0)"
+                              data-help="Enter your verification code"
+                              >What is this?</a
+                            >
+                          </div>
+                        </li>
+                      </ul>
+                      <label
+                        id="captchaControlChallengeCode_label"
+                        for="captchaControlChallengeCode"
+                        class="required"
+                        style="display: block"
+                        >Help us beat the bots</label
+                      >
+                      <div
+                        class="captcha-display-control"
+                        style="display: block"
+                      >
+                        <img
+                          class="captcha-imageContent"
+                          id="captchaControlChallengeCode-img"
+                          src="data:image/jpeg;base64,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"
+                          style="display: flex"
+                        />
+                        <div
+                          class="captcha-audio-playbtn"
+                          id="captchaControlChallengeCode-audio-playsection"
+                          title="Press audio button to play the challenge"
+                          style="display: none"
+                        >
+                          <button
+                            id="captchaControlChallengeCode-audio-playbtn"
+                            type="button"
+                            class="captcha-audio-big"
+                            aria-label="Press audio button to play the challenge"
+                            aria-disabled="false"
+                          ></button>
+                        </div>
+                        <div class="captcha-control-buttons">
+                          <button
+                            id="captchaControlChallengeCode-switchCaptchaBtn"
+                            type="button"
+                            class="captcha-switch-icon captcha-audio-small"
+                            title="Switch CAPTCHA type to audio"
+                            aria-label="Switch CAPTCHA type to audio"
+                            aria-disabled="false"
+                          ></button
+                          ><button
+                            id="captchaControlChallengeCode-generateCaptchaBtn"
+                            type="button"
+                            title="Create new CAPTCHA"
+                            aria-label="Create new CAPTCHA"
+                            class="captcha-refresh-icon"
+                            aria-disabled="false"
+                          ></button>
+                        </div>
+                        <span
+                          id="captchaControlChallengeCode-activeCaptchaType"
+                          style="display: none"
+                          >Visual</span
+                        ><span
+                          id="captchaControlChallengeCode-activeChallengeId"
+                          style="display: none"
+                          >bd041c30-62ba-4ab2-b24b-dc65b6bb2f74</span
+                        ><span
+                          id="captchaControlChallengeCode-activeAzureRegion"
+                          style="display: none"
+                        ></span>
+                      </div>
+                      <div
+                        id="captchaControlChallengeCode-apierror"
+                        role="alert"
+                        class=""
+                        aria-hidden="true"
+                        style="display: none"
+                      ></div>
+                      <input
+                        id="captchaControlChallengeCode"
+                        class="textInput captchaChallengeCodeInput"
+                        type="text"
+                        aria-disabled="false"
+                        placeholder="Enter the characters you see"
+                        title="Enter the characters you see"
+                        style="display: inline-table"
+                      />
+                      <div
+                        class="working"
+                        style="display: none"
+                        aria-hidden="true"
+                      ></div>
+                      <div class="buttons">
+                        <button
+                          class="sendCode"
+                          id="emailVerificationControl_but_send_code"
+                          type="button"
+                          aria-label="Send verification code"
+                          aria-hidden="false"
+                          style="display: inline"
+                        >
+                          Send verification code</button
+                        ><button
+                          class="verifyCode"
+                          id="emailVerificationControl_but_verify_code"
+                          type="button"
+                          aria-label="Verify code"
+                          aria-hidden="true"
+                          style="display: none"
+                        >
+                          Verify code</button
+                        ><button
+                          class="sendNewCode"
+                          id="emailVerificationControl_but_send_new_code"
+                          type="button"
+                          aria-label="Send new code"
+                          aria-hidden="true"
+                          style="display: none"
+                        >
+                          Send new code</button
+                        ><button
+                          class="changeClaims"
+                          id="emailVerificationControl_but_change_claims"
+                          type="button"
+                          aria-label="Change e-mail"
+                          aria-hidden="true"
+                          style="display: none"
+                        >
+                          Change e-mail
+                        </button>
+                      </div>
+                    </div>
+                    <a class="helpLink tiny" href="javascript:void(0)"
+                      >What is this?</a
+                    >
+                  </div>
+                </li>
+                <li class="Password newPassword_li">
+                  <div class="attrEntry">
+                    <label
+                      id="newPassword_label"
+                      for="newPassword"
+                      class="required"
+                      >New Password</label
+                    >
+                    <div class="error itemLevel" role="alert"></div>
+                    <input
+                      id="newPassword"
+                      class="textInput"
+                      type="password"
+                      placeholder="New Password"
+                      title="Enter new password"
+                      autocomplete="new-password"
+                      aria-required="true"
+                      aria-disabled="true"
+                      disabled="disabled"
+                      tabindex="-1"
+                    /><a
+                      class="helpLink tiny"
+                      href="javascript:void(0)"
+                      data-help="Enter new password"
+                      >What is this?</a
+                    >
+                  </div>
+                </li>
+                <li class="Password reenterPassword_li">
+                  <div class="attrEntry">
+                    <label
+                      id="reenterPassword_label"
+                      for="reenterPassword"
+                      class="required"
+                      >Confirm New Password</label
+                    >
+                    <div class="error itemLevel" role="alert"></div>
+                    <input
+                      id="reenterPassword"
+                      class="textInput"
+                      type="password"
+                      placeholder="Confirm New Password"
+                      title="Confirm new password"
+                      autocomplete="new-password"
+                      aria-required="true"
+                      aria-disabled="true"
+                      disabled="disabled"
+                      tabindex="-1"
+                    /><a
+                      class="helpLink tiny"
+                      href="javascript:void(0)"
+                      data-help="Confirm new password"
+                      >What is this?</a
+                    >
+                  </div>
+                </li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="buttons">
+              <button
+                id="continue"
+                type="submit"
+                form="attributeVerification"
+                aria-disabled="true"
+                aria-label="Create"
+                tabindex="-1"
+              >
+                Create</button
+              ><button id="cancel" aria-label="Cancel" formnovalidate="">
+                Cancel
+              </button>
+            </div>
+
+            <div
+              class="verifying-modal"
+              aria-live="assertive"
+              aria-labelledby="verifying_blurb"
+            >
+              <div id="verifying_blurb"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: stretch;
+      overflow: hidden;
+    }
+
+    .sub-container {
+      /* width: 100%; */
+      height: 100%;
+      /* padding: 10px; */
+    }
+
+    .left-container-wrapper {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .left-container {
+      height: 100%;
+      background-color: #d1ec4a;
+      border-radius: 16px;
+      padding: 0px 30px 0px 40px;
+    }
+
+    .left-top-section {
+      padding-top: 40px;
+    }
+
+    .right-container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+    .logo-container > span {
+      margin-left: 5px;
+    }
+
+    .header-text {
+      font-weight: 700;
+      font-size: 24px;
+      color: #4c5c18;
+    }
+
+    #api {
+      width: 50%;
+    }
+
+    .entry-item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-header {
+      margin-top: 20px;
+      color: #4c5c18;
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    .hero-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-desc {
+      line-height: 20px;
+      font-weight: 400;
+      color: #4c5c18;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .hero-img {
+      width: 55%;
+      z-index: 1;
+    }
+
+    /* ******************* from controls ****************** */
+
+    .helpLink {
+      display: none;
+    }
+
+    input {
+      /* width: 100%; */
+      height: 42px;
+      border: 0.5px solid black;
+      border-radius: 24px;
+      padding: 0 32px;
+      /* padding: 10px 32px; */
+      margin-top: 5px;
+      margin-bottom: 14px;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .intro {
+      margin-bottom: 12px;
+    }
+
+    .intro > h2 {
+      font-size: 16px;
+      font-weight: 400;
+      opacity: 0.6;
+    }
+
+    .buttons {
+      width: 100%;
+      display: flex;
+    }
+
+    #next,
+    #continue,
+    #cancel {
+      width: 100%;
+      height: 46px;
+      gap: 10px;
+      border: none;
+      border-radius: 24px;
+      opacity: 0px;
+      background-color: #d1ec4a;
+      background: #d1ec4a;
+      text-align: center;
+      font-weight: 700;
+      margin: 0 5px;
+    }
+
+    button:hover {
+      scale: 1.1;
+    }
+
+    #emailVerificationControl_but_send_code {
+    }
+
+    #next:hover {
+      cursor: pointer;
+    }
+
+    .divider > h2 {
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .create {
+      text-align: center;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      text-align: left;
+    }
+
+    .password-label {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #forgotPassword {
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .right-logo-container {
+      display: none;
+    }
+
+    #captchaControlChallengeCode {
+      height: 30px;
+    }
+
+    @media (max-width: 960px) {
+      .left-container-wrapper {
+        display: none;
+      }
+
+      :root {
+      }
+
+      #api {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .container {
+        overflow: auto;
+      }
+      .right-container {
+        margin: 50px 0;
+      }
+
+      .right-logo-container {
+        display: flex;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</html>
